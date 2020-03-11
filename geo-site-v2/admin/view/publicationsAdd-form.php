@@ -27,6 +27,7 @@ if( isset ($_SESSION['loginId'])){
 			<label>Date de mise à jour : </label><input type="date" name="majDate"><br/>
 			<label>Date de consultation : </label><input type="date" name="consultation"><br/>
 			<label> URL : </label><input type="url" name="url"><br/>
+			<input type="submit" name="valider">
 		</form>
 
 	<?php $content = ob_get_clean();
