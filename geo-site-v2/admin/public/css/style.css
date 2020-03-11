@@ -1,0 +1,37 @@
+html, body {
+	font-family: 'VT323', monospace;
+}
+
+h2 {
+	font-size: 3em;
+	text-align: center;
+}
+
+hr {
+	width: 33%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+p {
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Formulaires*/
+
+label {
+	
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+input {
+	margin-bottom: 10px;
+}
+
+#valider {
+	text-align: center;
+	margin-top: 10px;
+}
