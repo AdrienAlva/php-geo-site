@@ -27,6 +27,23 @@ function connexionCheck($loginId){
 }//EO connexionCheck function -> search for existing id and retrieve password from database
 
 
-function addElecRessource(){
+function addElecRessource($name, $surname, $title, $support, $location, $editor, $publicationDate, $majDate, $consultation, $url){
+
+	$db = dbConnect();
+
+    $req = $db->prepare('INSERT INTO `noticebiblioelectronique`(`name`, `surname`, `title`, `support`, `location`, `editor`, `publicationDate`, `majDate`, `consultation`, `url`) VALUES (:name, :surname, :title, :support, :location, :editor, :publicationDate, :majDate, :consultation, :url)');
+    $req->execute(array(
+        'name' => $name,
+        'surname' => $surname,
+        'title' => $title,
+        'support' => $support,
+        'location' => $location,
+        'editor' => $editor,
+        'publicationDate' => $publicationDate,
+        'majDate' => $majDate,
+        'consultation' => $consultation,
+        'url' => $url
+		));
+    
 
 }//EO addElecRessource fucntion -> create a row in the noticebiblioelectronique table
