@@ -4,18 +4,17 @@ session_start();
 
 if( isset ($_SESSION['loginId'])){
 
-	$title = 'Ajouter une notice bibliographique électronique';
+	$title = 'Ajouter une notice bibliographique';
 
 	ob_start(); ?>
 
-		<p>(selon la Norme internationale ISO 690-2 reprise en France par la norme AFNOR NF Z-44005-2 du 20 janvier 1998)</p>
-		<br/>
-		<hr/>
+		
 		<p>NOM de l'auteur, Prénom (ou organisme). Titre de la page d'accueil [type de support]. Lieu de publication : éditeur, date. Date de mise à jour. [Date de consultation]. Disponibilité et accès.
 		</p>
-		<br/>
+		
 		<hr/>
 
+		<div id="elecForm">
 		<form method="post" action="../controller/process-publicationAdd.php">
 			<label>Nom de l'auteur</label><input type="text" name="name"><br/>
 			<label>Prénom de l'auteur ou organisme : </label><input type="text" name="surname"><br/>
@@ -27,8 +26,17 @@ if( isset ($_SESSION['loginId'])){
 			<label>Date de mise à jour : </label><input type="date" name="majDate"><br/>
 			<label>Date de consultation : </label><input type="date" name="consultation"><br/>
 			<label> URL : </label><input type="url" name="url"><br/>
-			<input type="submit" name="valider">
+			<div id="submitButton"><input  type="submit" name="valider" value="Ajouter"></div>
 		</form>
+		</div>
+
+		<hr/>
+
+		<div class="noticeManagementLinks">
+		<a href="/geo-site-v2/admin/view/admin-panel.php">Accueil administrateur</a>
+		<span> / </span>
+		<a href="../controller/logout.php">Déconnexion</a>
+		</div>
 
 	<?php $content = ob_get_clean();
 

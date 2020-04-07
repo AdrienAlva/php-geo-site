@@ -10,11 +10,6 @@
         
     <body>
 
-    	
-		
-
-		
-
 		<!-- TITLE + CONTENT -->
 
 		<h2><?= $title ?></h2>

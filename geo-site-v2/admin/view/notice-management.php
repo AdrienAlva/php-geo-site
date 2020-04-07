@@ -4,23 +4,26 @@ if(!isset($_SESSION)){session_start();}
 
 if( isset ($_SESSION['loginId'])){
 
-	$title = 'Admin panel';
+	$title = 'Gestion des notices bibliographiques';
 
 	ob_start(); ?>
 
-		<ul>
-			<li><span>Créer une notice bibliographique : </span><a href="../view/publicationsAdd-form.php">électronique</a></li>
-			<li><span>Supprimer ou modifier une notice bibliographique : </span><a href="/geo-site-v2/admin/view/notice-management.php">gérer</a></li>
-		</ul>
+		<?php require_once("../controller/functions.php");
 
+		managementElecBiblio();
+
+		?>
+		<div class="noticeManagementLinks">
+		<a href="/geo-site-v2/admin/view/admin-panel.php">Accueil administrateur</a>
+		<span> / </span>
 		<a href="../controller/logout.php">Déconnexion</a>
+		</div>
 
 	<?php $content = ob_get_clean();
 
 	require("admin-template.php");
 
-
 }//EO if( isset ($_SESSION['loginId']))
 else{
 	echo 'Accès non-autorisé.';
-}
+}//EO else -> accès non-autorisé

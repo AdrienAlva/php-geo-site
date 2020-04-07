@@ -11,7 +11,7 @@
 	   		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
 	   		crossorigin="">
    		</script>
-        <link  rel="stylesheet" href="public/css/style.css" /> 
+        <link  rel="stylesheet" href="/geo-site-v2/public/css/style.css" /> 
     </head>
         
     <body>
@@ -27,27 +27,24 @@
 		</div>
 
 		<script type="text/javascript">
-			L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-		    	
-		    	maxZoom: 18,
-		    	id: 'mapbox/streets-v11',
-			    tileSize: 512,
-			    zoomOffset: -1,
-			    accessToken: 'pk.eyJ1IjoiYWxkcmluYWx2YSIsImEiOiJjazdlbjR2NXcwejczM2hwYXlteWdzejE2In0.RXY7QLqzjHqnDU9_Ux4g5Q'
+			var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+			subdomains: 'abcd',
+			maxZoom: 19
 			}).addTo(mymap);
 		</script>
 		
 
 		<div id="blocMenu">
 			<ul id="ulMenu"> <!--MENU WID -->
-				<li><a href="#">Welcome</a></li>
-				<li><a href="#">Publications</a></li>
-				<li><a href="#">Teaching</a></li>
-				<li><a href="#">Data</a></li>
-				<li><a href="#">Phd thesis</a></li>
-				<li><a href="#">Gallery</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>					
+				<li><a href="/geo-site-v2/index.php" class='menuLink'>Welcome</a></li>
+				<li><a href="/geo-site-v2/view/publications.php" class='menuLink'>Publications</a></li>
+				<li><a href="#" class='menuLink'>Teaching</a></li>
+				<li><a href="#" class='menuLink'>Data</a></li>
+				<li><a href="#" class='menuLink'>Phd thesis</a></li>
+				<li><a href="#" class='menuLink'>Gallery</a></li>
+				<li><a href="#" class='menuLink'>Blog</a></li>
+				<li><a href="#" class='menuLink'>Contact</a></li>					
 			</ul>
 		</div>
 

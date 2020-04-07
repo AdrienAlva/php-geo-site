@@ -60,7 +60,16 @@ h2 {
 
 p { 
 	width: 95%;
-	text-align: justify;
+	/*text-align: justify;*/
+	word-wrap: break-word;
+}
+
+hr{
+	width: 50%;
+}
+
+.titleItalic {
+	font-style: italic;
 }
 
 /* -----MENU----- */
@@ -96,17 +105,18 @@ ul {
 	margin-left: 9%;
 	padding-top: 0;
 	margin-top: 0;
+
 }
 
-a {
+.menuLink  {
 	text-decoration: none;
 	color: white;
 }
 
-a:visited {
-	color: initial;
+.menuLink:visited {
+	color: white;
 }
 
- a:hover {
+ .menuLink:hover {
 	text-decoration: none;
 }
