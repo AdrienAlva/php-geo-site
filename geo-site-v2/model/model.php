@@ -3,7 +3,7 @@
 function dbConnect(){
 	
 	try{
-		$db = new PDO('mysql:host=localhost;dbname=site-emilien;charset=utf8', 'root', 'freddy1991!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));	
+		$db = new PDO('mysql:host=localhost;dbname=site-emilien;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));	
 	}
 
 	catch(Exception $e) {	
